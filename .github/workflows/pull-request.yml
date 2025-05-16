@@ -76,7 +76,7 @@ jobs:
         with:
           arch: ${{ env.ARCH }}
           use-sudo: true
-      - id: env 
+      - id: env
         name: Setup Dependencies Env Variables
         uses: ./.github/actions/setup-build-env
       - name: Docker meta
@@ -154,7 +154,7 @@ jobs:
         with:
           arch: ${{ env.ARCH }}
           use-sudo: true
-      - id: env 
+      - id: env
         name: Setup Dependencies Env Variables
         uses: ./.github/actions/setup-build-env
       - name: Docker meta
@@ -222,6 +222,7 @@ jobs:
     with:
       parent_run_id: ${{ github.run_id }}
   build-agent-windows:
+    if: false
     strategy:
       matrix:
         os: [windows]
